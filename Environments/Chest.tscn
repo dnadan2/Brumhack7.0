@@ -20,10 +20,9 @@ animations = [ {
 
 [node name="Chest" type="AnimatedSprite"]
 
-transform/scale = Vector2( 8, 8 )
 frames = SubResource( 1 )
 animation = "closed"
-offset = Vector2( 8, 8 )
+offset = Vector2( 64, 64 )
 script/script = ExtResource( 3 )
 
 

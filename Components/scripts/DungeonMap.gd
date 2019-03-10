@@ -28,7 +28,7 @@ var BottomTileMap
 
 func _ready():
 	BottomTileMap = get_node("BottomTileMap")
-	for i in range(0, 128):
+	for i in range(0, GameData.TileSize):
 		flat_not_walkable.push_back(not_walkable.has(i))
 	set_map_type(GameData.chosen_map)
 
@@ -112,11 +112,11 @@ func set_map_type(type):
 		for enemy in map.npcs:
 			var node = enemy.value.instance()
 			Enemies.add_child(node)
-			node.set_pos((enemy.position - Vector2(100, 100)) * 128)
+			node.set_pos((enemy.position - Vector2(100, 100)) * GameData.TileSize)
 		
 		for item in map.items:
 			var node = item.value.new()
-			node.place((item.position - Vector2(100, 100)) * 128)
+			node.place((item.position - Vector2(100, 100)) * GameData.TileSize)
 
 		for env in map.environmentObjects:
 			var Environments = self.get_node("/root/Node2D/Environments")
@@ -153,7 +153,7 @@ func set_map_type(type):
 				node.setLocked(false)
 
 			GameData.environmentObjects.append(node)
-			node.set_pos((env.position - Vector2(100, 100)) * 128)
+			node.set_pos((env.position - Vector2(100, 100)) * GameData.TileSize)
 	
 	map_type = type
 

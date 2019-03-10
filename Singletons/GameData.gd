@@ -86,7 +86,7 @@ func pickedUp(item):
 
 func itemAtPos(pos):
 	for item in placedItems:
-		if (item.pos.x / 128 == round(pos.x) and item.pos.y / 128 == round(pos.y)):
+		if (item.pos.x / GameData.TileSize == round(pos.x) and item.pos.y / GameData.TileSize == round(pos.y)):
 			return item
 
 func placeItem(item):

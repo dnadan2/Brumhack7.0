@@ -66,7 +66,7 @@ func attack(character):
 
 func _process(delta):
 	if moving:
-		var length = 128
+		var length = GameData.TileSize
 		time_elapsed = time_elapsed + delta
 		if movement_direction == Enums.DIRECTION.LEFT:
 			self.set_pos(get_pos() + Vector2(-length * (delta / 0.4), 0))
@@ -106,7 +106,7 @@ func takeDamage(damage):
 	emit_signal("statsChanged", "health", "Down", -damage)
 
 func pickUp():
-	var item = GameData.itemAtPos(self.get_pos()/GameData.TileSize)
+	var item = GameData.itemAtPos(self.get_pos() / GameData.TileSize)
 	if (item != null):
 		item.pickup()
 		emit_signal("itemPickedUp", item)

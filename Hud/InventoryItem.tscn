@@ -30,7 +30,7 @@ script/script = ExtResource( 2 )
 [node name="ItemIcon" parent="." instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 12, 0 )
-transform/scale = Vector2( 5, 5 )
+transform/scale = Vector2( 1, 1 )
 
 [node name="ItemDescription" parent="." instance=ExtResource( 4 )]
 
