@@ -20,16 +20,16 @@ func getAmount():
 func get_offset(n):
 	# Place the hit splat on a hexagonal grid - see "Rings", "Spiral rings" at:
 	# https://www.redblobgames.com/grids/hexagons
-	var ring = floor((1.5 + sqrt(pow(1.5, 2) + 10 * n)) / 5.0)
-	var index = n - ring * (2 + (ring - 1) * 5) / 2.0
-	
-	var radius = ring
-	var edge = radius
-	var traversal = Vector2(-1.0/2.0, sqrt(3.0)/2.0) * 512.0
-	
-	if radius == 0:
+	if n == 0:
 		return Vector2(0, 0)
 	else:
+		var ring = floor(-1.0/2.0 + sqrt(9.0 + 12.0 * (n - 1.0)) / 6.0) + 1
+		var index = n - ring * (2 + (ring - 1) * 5) / 2.0
+		
+		var radius = ring
+		var edge = radius
+		var traversal = Vector2(-1.0/2.0, sqrt(3.0)/2.0) * 512.0
+		
 		# Move from centre to ring
 		# Set initial position
 		var position = Vector2(1, 0) * radius * 512.0
