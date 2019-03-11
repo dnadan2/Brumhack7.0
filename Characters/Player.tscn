@@ -8,7 +8,6 @@
 [node name="Player" type="AnimatedSprite"]
 
 transform/pos = Vector2( 640, 1024 )
-transform/scale = Vector2( 4, 4 )
 frames = ExtResource( 1 )
 animation = "stand_down"
 centered = false
@@ -17,6 +16,7 @@ script/script = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+transform/pos = Vector2( 0.188965, 0.188965 )
 offset = Vector2( 64, 64 )
 anchor_mode = 1
 rotating = false
@@ -37,15 +37,15 @@ drag_margin/bottom = 0.2
 
 [node name="PrimaryWeapon" type="Sprite" parent="."]
 
-transform/pos = Vector2( 10.6666, 16 )
-transform/scale = Vector2( 0.5, 0.5 )
+transform/pos = Vector2( 7.69312, 13.5706 )
+transform/scale = Vector2( 0.12, 0.12 )
 texture = ExtResource( 3 )
 offset = Vector2( -10, -10 )
 
 [node name="SecondaryWeapon" type="Sprite" parent="."]
 
-transform/pos = Vector2( 21.3333, 18 )
-transform/scale = Vector2( 0.5, 0.5 )
+transform/pos = Vector2( 22.8349, 15.6985 )
+transform/scale = Vector2( 0.12, 0.12 )
 texture = ExtResource( 4 )
 offset = Vector2( 0, -5 )
 
